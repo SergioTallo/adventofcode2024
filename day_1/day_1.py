@@ -1,3 +1,4 @@
+from typing import List
 from collections import Counter
 from utils_for_adventofcode.line_manipulation import read_lines, transform_to_list_of_int
 from utils_for_adventofcode.time import measure_time
@@ -7,11 +8,13 @@ from utils_for_adventofcode.download import download_input
 def main():
     print(f'Day 1:')
     download_input(2024, 1, 'session_cookie.txt')
-    print(f"First star: {calculate_distance('day_1/input_day1.txt')}")
-    print(f"Second star: {calculate_similarity_score('day_1/input_day1.txt')}")
+    first_star = calculate_distance('day_1/input_day1.txt')
+    print(f"First star: {first_star}")
+    second_star = calculate_similarity_score('day_1/input_day1.txt')
+    print(f"Second star: {second_star}")
 
-def _transform_lists(input_file: str):
-    lines = transform_to_list_of_int(read_lines(input_file=input_file))
+def _transform_lists(input_file: str) -> tuple[List[int], List[int]]:
+    lines = transform_to_list_of_int(data=read_lines(input_file=input_file))
     first_column = sorted([int(line[0]) for line in lines])
     second_column = sorted([int(line[1]) for line in lines])
     return first_column, second_column

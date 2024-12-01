@@ -32,3 +32,5 @@ def download_input(year: int, day: int, cookie_file_path: str):
                 print(f'Exception: {ex}')
         else:
             print(f"Failed to download input for day {day}. Status code: {response.status_code}")
+    else:
+        print(f"Input file 'day_{day}/input_day{day}.txt already exists.")

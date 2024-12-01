@@ -1,4 +1,6 @@
-def read_lines(input_file: str) -> list:
+from typing import List
+
+def read_lines(input_file: str) -> List[str]:
     """
     Read each line of text file and return a list of strings containing the lines of input file
     :param input_file: filepath to read in string format
@@ -9,7 +11,7 @@ def read_lines(input_file: str) -> list:
         data = file.read().splitlines()
     return data
 
-def transform_to_list_of_int(data: list) -> list:
+def transform_to_list_of_int(data: List[str]) -> List[List[int]]:
     """
     Transform a list of strings into a list of lists of int
     :param data:
@@ -17,7 +19,7 @@ def transform_to_list_of_int(data: list) -> list:
     """
     return [[int(x) for x in line.split()] for line in data]
 
-def transform_to_list_of_char(data: list) -> list:
+def transform_to_list_of_char(data: List[str]) -> List[List[str]]:
     """
     Transform a list of strings into a list of lists of characters
     :param data:
