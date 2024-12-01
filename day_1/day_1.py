@@ -3,7 +3,9 @@ from utils_for_adventofcode.line_manipulation import read_lines, transform_to_li
 from utils_for_adventofcode.time import measure_time
 from utils_for_adventofcode.download import download_input
 
+@measure_time
 def main():
+    print(f'Day 1:')
     download_input(2024, 1, 'session_cookie.txt')
     print(f"First star: {calculate_distance('day_1/input_day1.txt')}")
     print(f"Second star: {calculate_similarity_score('day_1/input_day1.txt')}")

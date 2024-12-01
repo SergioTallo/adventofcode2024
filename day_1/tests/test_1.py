@@ -1,4 +1,3 @@
-import pytest
 from day_1.day_1 import calculate_similarity_score, calculate_distance
 
 
