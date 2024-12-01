@@ -19,7 +19,6 @@ def download_input(year: int, day: int, cookie_file_path: str):
         else:
             print("Session cookie file not found.")
 
-        # Replace 'YOUR_SESSION_COOKIE' with your session cookie from Advent of Code website
         cookies = {'session': session_cookie}
 
         url = f'https://adventofcode.com/{year}/day/{day}/input'
@@ -29,7 +28,7 @@ def download_input(year: int, day: int, cookie_file_path: str):
             try:
                 with open(f'day_{day}/input_day{day}.txt', 'w') as file:
                     file.write(response.text)
-            except Exception as exception:
-                print(f'Exception: {exception}')
+            except Exception as ex:
+                print(f'Exception: {ex}')
         else:
             print(f"Failed to download input for day {day}. Status code: {response.status_code}")

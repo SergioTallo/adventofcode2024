@@ -1,4 +1,4 @@
-def readlines(input_file: str) -> list:
+def read_lines(input_file: str) -> list:
     """
     Read each line of text file and return a list of strings containing the lines of input file
     :param input_file: filepath to read in string format
@@ -16,7 +16,6 @@ def transform_to_list_of_int(data: list) -> list:
     :return:
     """
     return [[int(x) for x in line.split()] for line in data]
-
 
 def transform_to_list_of_char(data: list) -> list:
     """
