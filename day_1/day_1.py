@@ -1,5 +1,6 @@
 from typing import List
 from collections import Counter
+
 from utils_for_adventofcode.line_manipulation import read_lines, transform_to_list_of_int
 from utils_for_adventofcode.time import measure_time
 from utils_for_adventofcode.download import download_input
