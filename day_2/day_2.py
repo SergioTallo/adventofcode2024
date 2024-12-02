@@ -13,6 +13,7 @@ def main():
     second_star = sum_of_reports('day_2/input_day2.txt', safe_dumper=True)
     print(f"Second star: {second_star}")
 
+@measure_time
 def sum_of_reports(input_file: str, safe_dumper: bool = False) -> int:
     reports_transformed = transform_to_list_of_int(data=read_lines(input_file=input_file))
     sum_of_reports = 0
